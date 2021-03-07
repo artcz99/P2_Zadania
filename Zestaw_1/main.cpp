@@ -103,6 +103,46 @@ int *multiply(int *arr1, int size1, int *arr2, int size2) { //multiplies polynom
     return return_arr;
 }
 
+void Pascal(int N) {
+    int **S = new int *[N + 1];
+    int i = 0;
+    while (i <= N) {
+        i++;
+        S[i] = new int[i];
+    }
+    **S = 1;
+    **(S + 1) = 1;
+    *(*(S + 1) + 1) = 1;
+    i = 2;
+    while (i <= N) {
+        int j = 1;
+        *(*(S + i)) = 1;
+        while (j < i) {
+            *(*(S + i) + j) = *(*(S + i - 1) + j - 1) + *(*(S + i - 1) + j);
+            j++;
+        }
+        *(*(S + i) + j) = 1;
+        i++;
+    }
+    i = 0;
+    while (i <= N) {
+        int j = 0;
+        while (j <= i) {
+            std::cout << *(*(S + i) + j) << ' ';
+            j++;
+        }
+        std::cout << std::endl;
+        i++;
+    }
+
+    i = 0;
+    while (i <= N) {
+        delete[] S[i];
+        i++;
+    }
+    delete[] S;
+}
+
 
 int main() {
     std::cout << "Zadanie 0" << std::endl;
@@ -179,6 +219,12 @@ int main() {
     std::cout << std::endl;
 
     std::cout << "Zadanie 6" << std::endl;
-
+    int N = -1;
+    while (N < 0) {
+        std::cout << "Podaj liczbe nieujemna: " << std::endl;
+        std::cin >> N;
+        std::cout << std::endl;
+    }
+    Pascal(N);
 
 }
