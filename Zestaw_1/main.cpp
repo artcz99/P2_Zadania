@@ -174,6 +174,7 @@ int main() {
     cout << "Tablica m: ";
     print_arr(arr_m5, size_m5);
     cout << "Wynik mnozenia wielomianow: ";
+
     print_arr(multiply(arr_n5, size_n5, arr_m5, size_m5), size_n5 + size_m5 - 1);
     delete[] arr_n5;
     delete[] arr_m5;
