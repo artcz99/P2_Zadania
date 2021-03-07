@@ -1,0 +1,3 @@
+C:/Users/artur/CLionProjects/Git/Zestaw_1/cmake-build-debug/CMakeFiles/Zestaw_1.dir
+C:/Users/artur/CLionProjects/Git/Zestaw_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/artur/CLionProjects/Git/Zestaw_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
