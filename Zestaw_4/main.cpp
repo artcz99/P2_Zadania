@@ -159,7 +159,7 @@ int main() {
     cout << "f = a / c = " << f << endl;
     cout << "g = a * c = " << g << endl;
     Complex h;
-    cout << "Podaj dwie liczby po spacji" << endl;
+    cout << "Podaj dwie liczby oddzielone spacja" << endl;
     cin >> h;
     cout << "h = " << h << endl;
     h += a;
